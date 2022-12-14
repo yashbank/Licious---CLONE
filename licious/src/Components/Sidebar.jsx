@@ -1,4 +1,5 @@
 // import React, { ReactNode } from 'react';
+// import { FiSettings,FiStar,FiCompass,FiTrendingUp,FiHome } from "react-icons/fi";
 // import {
 //   IconButton,
 //   Box,
@@ -14,14 +15,14 @@
 //   BoxProps,
 //   FlexProps,
 // } from '@chakra-ui/react';
-// import {
-//   FiHome,
-//   FiTrendingUp,
-//   FiCompass,
-//   FiStar,
-//   FiSettings,
-//   FiMenu,
-// } from 'react-icons/fi';
+// // import {
+// //   FiHome,
+// //   FiTrendingUp,
+// //   FiCompass,
+// //   FiStar,
+// //   FiSettings,
+// //   FiMenu,
+// // } from 'react-icons/fi';
 // import { IconType } from 'react-icons';
 // import { ReactText } from 'react';
 
@@ -37,7 +38,7 @@
 //   { name: 'Settings', icon: FiSettings },
 // ];
 
-// export default function SimpleSidebar({ children }: { children: ReactNode }) {
+// export default function Sidebar({ children }: { children: ReactNode }) {
 //   const { isOpen, onOpen, onClose } = useDisclosure();
 //   return (
 //     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>

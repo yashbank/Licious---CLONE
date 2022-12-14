@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar';
+import Sidebar from './Components/Sidebar';
 // import SimpleSidebar from './Components/Sidebar';
 // import LargeWithAppLinksAndSocial from './Components/Footer';
 // import CardComp from "./Components/card"
@@ -51,6 +52,10 @@ function App() {
 
 
       <Navbar />
+      <Navbar />
+
+
+      {/* <Sidebar /> */}
 
 
 
