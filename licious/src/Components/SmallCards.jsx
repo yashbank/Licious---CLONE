@@ -14,17 +14,10 @@ import {
   
   const data = {
     isNew: true,
-<<<<<<< HEAD
     imageURL:
-      'https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=4600&q=80',
-    name: 'Wayfarer Classic',
-    price: 4.5,
-=======
-    imageURL:"https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/d667aa91-ba62-2117-a672-034b58bbac39/original/Chicken-Drumstick---Hero-Shot.jpg?format=webp",
-      
-    name: 'Chicken Thigh',
-    price: 349,
->>>>>>> 2c6bd50d961072af61ce41437336a503551f2211
+      'https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/6be8c5e9-8946-8b76-5340-991d476cd255/original/rtc_july_6images-13.jpg?format=webp',
+    name: 'Smoked Chicken Wings',
+    price: 450,
     rating: 4.2,
     numReviews: 34,
   };
@@ -62,9 +55,9 @@ import {
     );
   }
   
-  function CardinCategory() {
+  function SmallCard() {
     return (
-      <Flex p={50} w="full" alignItems="center" justifyContent="center" >
+      <Flex p={50} w="full" alignItems="center" justifyContent="center">
         <Box
           bg={useColorModeValue('white', 'gray.800')}
           maxW="sm"
@@ -111,7 +104,7 @@ import {
                 placement={'top'}
                 color={'gray.800'}
                 fontSize={'1.2em'}>
-                <chakra.a href={'#'} display={'flex'}>
+                <chakra.a href={'/login'} display={'flex'}>
                   <Icon as={FiShoppingCart} h={7} w={7} alignSelf={'center'} />
                 </chakra.a>
               </Tooltip>
@@ -121,11 +114,7 @@ import {
               <Rating rating={data.rating} numReviews={data.numReviews} />
               <Box fontSize="2xl" color={useColorModeValue('gray.800', 'white')}>
                 <Box as="span" color={'gray.600'} fontSize="lg">
-<<<<<<< HEAD
-                  £
-=======
                 ₹
->>>>>>> 2c6bd50d961072af61ce41437336a503551f2211
                 </Box>
                 {data.price.toFixed(2)}
               </Box>
@@ -136,4 +125,4 @@ import {
     );
   }
   
-  export default CardinCategory;
+  export default SmallCard;
