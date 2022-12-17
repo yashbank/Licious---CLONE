@@ -3,7 +3,9 @@ import Footer from "../Components/Footer"
 import Carousel from "../Components/Carousel"
 import Cards from "../Components/Cards"
 import { Heading } from '@chakra-ui/react'
-import Knowtheliciousway from "../Components/knowtheliciousway"
+import KnowTheLucious from "../Components/KnowTheLucious"
+import SmallCard from "../Components/SmallCards"
+
 function Home()
 {
 
@@ -34,12 +36,27 @@ function Home()
 
        {
         cardImages.map((e)=>{
-            return <Cards img = {e.img} text={e.text}/>
+            return <Cards img = {e.img} text={e.text} />
         })
        }
-       <Knowtheliciousway/>
-            
+       
         
+
+        
+        
+        </div>
+        <KnowTheLucious/>
+        <div style={
+            {
+                justifyContent:"center"
+            }
+        }>
+            <img style={{display:"block",margin:"auto"}} src="https://dao54xqhg9jfa.cloudfront.net/OMS-StaticBanner/a5372f18-3f0a-a801-0160-cb20957f3acd/original/static-bank-units-nov-web.jpg?format=webp" alt="ad" />
+        </div>
+        <div style={{display:"grid", gridTemplateColumns:"400px 400px 400px", gap:"10px"}}>
+            <SmallCard/>
+            <SmallCard/>
+            <SmallCard/>
         </div>
         <Footer/>
         </>
@@ -48,3 +65,6 @@ function Home()
 
 }
 export default Home
+
+
+
