@@ -15,6 +15,20 @@ import {
     useBreakpointValue,
     useDisclosure,
   } from '@chakra-ui/react';
+  import {Link as RouterLink} from "react-router-dom"
+  import {
+    
+    
+    PopoverHeader,
+    PopoverBody,
+    PopoverFooter,
+    PopoverArrow,
+    PopoverCloseButton,
+  } from "@chakra-ui/react"
+//   import AiOutlineShoppingCart from"react-icons"
+//   import { AiOutlineShoppingCart } from 'react-icons/fa'
+//   import { Icon, createIcon } from '@chakra-ui/react'
+  import { Input } from '@chakra-ui/react'
   import {
     HamburgerIcon,
     CloseIcon,
@@ -24,10 +38,12 @@ import {
   
   export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
+    
   
     return (
-      <Box>
+      <Box >
         <Flex
+        h={'20'}
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
           minH={'60px'}
@@ -51,12 +67,20 @@ import {
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+            <RouterLink to="/">
+
             <Text
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
               <img src="https://www.licious.in/img/rebranding/licious-logo.svg" alt="Logo" />
             </Text>
+
+                  </RouterLink>
+
+           
+              <Input w={"xl"} placeholder='Search for Any Delicious Product' style={{marginLeft:"80px"}} />
+              {/* <cart/> */}
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
@@ -68,7 +92,9 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-            <Button
+                <RouterLink to="/login">
+
+                <Button
               as={'a'}
               fontSize={'sm'}
               fontWeight={400}
@@ -76,6 +102,40 @@ import {
               href={'#'}>
               Sign In
             </Button>
+                  </RouterLink>
+                  <RouterLink to="/login">
+
+            <Button
+              as={'a'}
+              fontSize={'sm'}
+              fontWeight={400}
+              variant={'link'}
+              href={'#'}>
+                
+                {/* <Popover>
+  <PopoverTrigger>
+  <Button
+  as={'a'}
+  fontSize={'sm'}
+  fontWeight={400}
+  variant={'link'}
+  href={'#'}>
+  Sign In
+  </Button>
+  </PopoverTrigger>
+  <PopoverContent>
+  <PopoverArrow />
+  <PopoverCloseButton />
+  <PopoverHeader>Confirmation!</PopoverHeader>
+  <PopoverBody>Are you sure you want to have that milkshake?</PopoverBody>
+  </PopoverContent>
+</Popover> */}
+
+            </Button>
+</RouterLink>
+
+
+            
             <Button
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
@@ -88,6 +148,7 @@ import {
               }}>
               Sign Up
             </Button>
+            
           </Stack>
         </Flex>
   
@@ -105,8 +166,9 @@ import {
   
     return (
       <Stack direction={'row'} spacing={4}>
+            
         {NAV_ITEMS.map((navItem) => (
-          <Box key={navItem.label}>
+            <Box key={navItem.label}>
             <Popover trigger={'hover'} placement={'bottom-start'}>
               <PopoverTrigger>
                 <Link
@@ -116,15 +178,16 @@ import {
                   fontWeight={500}
                   color={linkColor}
                   _hover={{
-                    textDecoration: 'none',
-                    color: linkHoverColor,
-                  }}>
+                      textDecoration: 'none',
+                      color: linkHoverColor,
+                    }}>
                   {navItem.label}
                 </Link>
               </PopoverTrigger>
   
+                      <RouterLink to="/category">
               {navItem.children && (
-                <PopoverContent
+                  <PopoverContent
                   border={0}
                   boxShadow={'xl'}
                   bg={popoverContentBgColor}
@@ -133,11 +196,12 @@ import {
                   minW={'sm'}>
                   <Stack>
                     {navItem.children.map((child) => (
-                      <DesktopSubNav key={child.label} {...child} />
-                    ))}
+                        <DesktopSubNav key={child.label} {...child} />
+                        ))}
                   </Stack>
                 </PopoverContent>
               )}
+              </RouterLink>
             </Popover>
           </Box>
         ))}
@@ -185,9 +249,12 @@ import {
         bg={useColorModeValue('white', 'gray.800')}
         p={4}
         display={{ md: 'none' }}>
+                
+            <RouterLink to="/category">
         {NAV_ITEMS.map((navItem) => (
-          <MobileNavItem key={navItem.label} {...navItem} />
+            <MobileNavItem key={navItem.label} {...navItem} />
         ))}
+            </RouterLink>
       </Stack>
     );
   };
@@ -251,41 +318,77 @@ import {
   
   const NAV_ITEMS: Array<NavItem> = [
     {
-      label: 'Inspiration',
+      label: 'Categories',
       children: [
         {
-          label: 'Explore Design Work',
-          subLabel: 'Trending Design to inspire you',
+          label: "Today's Deals",
+        //   subLabel: 'Trending Design to inspire you',
           href: '#',
         },
         {
-          label: 'New & Noteworthy',
-          subLabel: 'Up-and-coming Designers',
+          label: 'Chicken',
+        //   subLabel: 'Up-and-coming Designers',
           href: '#',
         },
+        {
+            label: 'Mutton',
+          //   subLabel: 'Up-and-coming Designers',
+            href: '#',
+          },
+          {
+            label: 'Fish And SeaFood',
+          //   subLabel: 'Up-and-coming Designers',
+            href: '#',
+          },
+          {
+            label: 'Prawns',
+          //   subLabel: 'Up-and-coming Designers',
+            href: '#',
+          },
+          {
+            label: 'Ready To Cook',
+          //   subLabel: 'Up-and-coming Designers',
+            href: '#',
+          },
+          {
+            label: 'Eggs',
+          //   subLabel: 'Up-and-coming Designers',
+            href: '#',
+          },
+          {
+            label: 'Spreads',
+          //   subLabel: 'Up-and-coming Designers',
+            href: '#',
+          },
+          {
+            label: 'Cold Cuts',
+          //   subLabel: 'Up-and-coming Designers',
+            href: '#',
+          },
       ],
     },
     {
-      label: 'Find Work',
+      label: 'Login',
       children: [
         {
-          label: 'Job Board',
-          subLabel: 'Find your dream design job',
-          href: '#',
+          label: "Login",
+        //   subLabel: 'Find your dream design job',
+          href: '/login',
         },
-        {
-          label: 'Freelance Projects',
-          subLabel: 'An exclusive list for contract work',
-          href: '#',
-        },
+        // {
+        //   label: 'Freelance Projects',
+        //   subLabel: 'An exclusive list for contract work',
+        //   href: '#',
+        // },
       ],
     },
-    {
-      label: 'Learn Design',
-      href: '#',
-    },
-    {
-      label: 'Hire Designers',
-      href: '#',
-    },
+
+    
   ];
+
+//   function cart()
+//   {
+//     <div>
+// <AiOutlineShoppingCart/>
+//     </div>
+//   }
