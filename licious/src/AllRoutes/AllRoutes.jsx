@@ -5,6 +5,7 @@ import Home from "../Pages/Home"
 import Login from "../Pages/Login"
 import SingleCategory from "../Pages/SingleCategory"
 import VerifyMail from "../Pages/VerifyMail"
+import Contact from "../Pages/Contact"
 function AllRoutes()
 {
     return(
@@ -13,6 +14,7 @@ function AllRoutes()
             <Route path="/login" element={<Login/>}></Route>
             <Route path="/Category" element={<SingleCategory/>}></Route>
             <Route path="verifymail" element={<VerifyMail/>}></Route>
+            <Route path="/contact" element={<Contact/>}></Route>
             
         </Routes>
 
