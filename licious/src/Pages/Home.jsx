@@ -5,6 +5,7 @@ import Cards from "../Components/Cards"
 import { Heading } from '@chakra-ui/react'
 import KnowTheLucious from "../Components/KnowTheLucious"
 import SmallCard from "../Components/SmallCards"
+import { Link as RouterLink } from "react-router-dom"
 
 function Home()
 {
@@ -22,6 +23,10 @@ function Home()
 {text:"Plant based Meat", img:"https://dao54xqhg9jfa.cloudfront.net/OMS-Category/66e49926-d949-dfb3-2e79-8052d07f0a3b/original/PBM_6_(8).png"},
 {text:"Meat Masala", img:"https://dao54xqhg9jfa.cloudfront.net/OMS-Category/3f37d093-81cf-3c66-115a-2a4575420d68/original/Masala_1200x840_web.png"},
 ]
+
+
+
+
     return(
         <>
         <Navbar/>
@@ -32,6 +37,39 @@ function Home()
   </Heading>
 
 
+            <RouterLink to="/category">
+        <div style={{display:"grid", gridTemplateColumns: "300px 300px 300px 300px", gap:"20px", justifyContent:"center", padding:"20px"}}>
+
+       {
+           cardImages.map((e)=>{
+               return <Cards text = {e.text} img = {e.img} />
+            }
+            )
+        }
+       
+        
+
+        
+        
+        </div>
+            </RouterLink>
+        <KnowTheLucious/>
+        <div style={
+            {
+                justifyContent:"center"
+            }
+        }>
+            <img style={{display:"block",margin:"auto"}} src="https://dao54xqhg9jfa.cloudfront.net/OMS-StaticBanner/a5372f18-3f0a-a801-0160-cb20957f3acd/original/static-bank-units-nov-web.jpg?format=webp" alt="ad" />
+        </div>
+        <div style={{display:"grid", gridTemplateColumns:"400px 400px 400px", gap:"10px", justifyContent:"center"}}>
+            <SmallCard/>
+            <SmallCard/>
+            <SmallCard/>
+            <SmallCard/>
+            <SmallCard/>
+            <SmallCard/>
+        </div>
+        <KnowTheLucious/>
         <div style={{display:"grid", gridTemplateColumns: "300px 300px 300px 300px", gap:"20px", justifyContent:"center", padding:"20px"}}>
 
        {
@@ -45,7 +83,6 @@ function Home()
         
         
         </div>
-        <KnowTheLucious/>
         <div style={
             {
                 justifyContent:"center"
@@ -53,11 +90,7 @@ function Home()
         }>
             <img style={{display:"block",margin:"auto"}} src="https://dao54xqhg9jfa.cloudfront.net/OMS-StaticBanner/a5372f18-3f0a-a801-0160-cb20957f3acd/original/static-bank-units-nov-web.jpg?format=webp" alt="ad" />
         </div>
-        <div style={{display:"grid", gridTemplateColumns:"400px 400px 400px", gap:"10px"}}>
-            <SmallCard/>
-            <SmallCard/>
-            <SmallCard/>
-        </div>
+
         <Footer/>
         </>
 
