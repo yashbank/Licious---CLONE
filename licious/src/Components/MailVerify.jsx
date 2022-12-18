@@ -1,3 +1,7 @@
+
+
+import { Link as RouterLink } from 'react-router-dom';
+
 import { Center, Heading } from '@chakra-ui/react';
 import {
   Button,
@@ -9,10 +13,6 @@ import {
   HStack,
 } from '@chakra-ui/react';
 import { PinInput, PinInputField } from '@chakra-ui/react';
-
-
-import { Link as RouterLink } from 'react-router-dom';
-
 
 export default function VerifyEmailForm(): JSX.Element {
   return (
@@ -58,30 +58,16 @@ export default function VerifyEmailForm(): JSX.Element {
             </HStack>
           </Center>
         </FormControl>
-
         <Stack spacing={6}>
-
-            <RouterLink to="/">
-        <Stack spacing={6}>
-
-
           <Button
             bg={'blue.400'}
             color={'white'}
             _hover={{
-
               bg: 'blue.500',
-
-                bg: 'blue.500',
-
             }}>
             Verify
           </Button>
         </Stack>
-
-
-                </RouterLink>
-
       </Stack>
     </Flex>
   );
