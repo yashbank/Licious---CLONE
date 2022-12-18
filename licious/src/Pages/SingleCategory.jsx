@@ -4,6 +4,9 @@ import CardinCategory from "../Components/CardinCategory";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 function SingleCategory ()
+<<<<<<< HEAD
+{
+=======
 
 
 {
@@ -22,10 +25,23 @@ function SingleCategory ()
 
 
 
+>>>>>>> 2c6bd50d961072af61ce41437336a503551f2211
     return (
         <div>
             <Navbar/>
         <Grid templateColumns="repeat(3, 1fr) " gap={2} >
+<<<<<<< HEAD
+            <CardinCategory/>
+            <CardinCategory/>
+            <CardinCategory/>
+            <CardinCategory/>
+            <CardinCategory/>
+            <CardinCategory/>
+            <CardinCategory/>
+            <CardinCategory/>
+            <CardinCategory/>
+            <CardinCategory/>
+=======
             <CardinCategory />
             <CardinCategory />
             <CardinCategory />
@@ -39,11 +55,16 @@ function SingleCategory ()
             <CardinCategory />
             <CardinCategory />
             
+>>>>>>> 2c6bd50d961072af61ce41437336a503551f2211
         </Grid>
         <Footer/>
         </div>
     )
 }
+<<<<<<< HEAD
+export default SingleCategory
+=======
 export default SingleCategory
 
 
+>>>>>>> 2c6bd50d961072af61ce41437336a503551f2211
