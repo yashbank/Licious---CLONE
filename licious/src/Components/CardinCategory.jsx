@@ -14,17 +14,17 @@ import {
   
   const data = {
     isNew: true,
-<<<<<<< HEAD
+
     imageURL:
       'https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=4600&q=80',
     name: 'Wayfarer Classic',
     price: 4.5,
-=======
+
     imageURL:"https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/d667aa91-ba62-2117-a672-034b58bbac39/original/Chicken-Drumstick---Hero-Shot.jpg?format=webp",
       
     name: 'Chicken Thigh',
     price: 349,
->>>>>>> 2c6bd50d961072af61ce41437336a503551f2211
+
     rating: 4.2,
     numReviews: 34,
   };
@@ -121,11 +121,10 @@ import {
               <Rating rating={data.rating} numReviews={data.numReviews} />
               <Box fontSize="2xl" color={useColorModeValue('gray.800', 'white')}>
                 <Box as="span" color={'gray.600'} fontSize="lg">
-<<<<<<< HEAD
-                  £
-=======
-                ₹
->>>>>>> 2c6bd50d961072af61ce41437336a503551f2211
+
+                  
+             ₹
+
                 </Box>
                 {data.price.toFixed(2)}
               </Box>
